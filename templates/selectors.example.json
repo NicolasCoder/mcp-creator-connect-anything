@@ -1,0 +1,45 @@
+{
+  "service_info": {
+    "name": "Example Web Service MCP",
+    "prefix": "example",
+    "target_url": "https://app.example.com/studio",
+    "chrome_port": 9363,
+    "daemon_port": 9364
+  },
+  "api_endpoints": {
+    "gateway_base": "https://api.example.com",
+    "generate_path": "/v1/generations",
+    "status_path": "/v1/generations/",
+    "user_quota_path": "/v1/user/credits",
+    "rpc_keywords": ["generate", "create", "status", "credits", "quota", "exports"]
+  },
+  "selectors": {
+    "target_url": "https://app.example.com/studio",
+    "logged_in_indicator": "[data-testid=\"user-avatar\"], [aria-label*=\"Account\"], [aria-label*=\"Perfil\"], button.profile-menu",
+    "logged_out_indicator": "[data-testid=\"login-button\"], button:has-text(\"Sign in\"), button:has-text(\"Entrar\"), a[href*=\"login\"]",
+    "prompt_input": "[data-testid=\"prompt-textarea\"], textarea[placeholder*=\"Describe\"], textarea[placeholder*=\"Digite\"], .ProseMirror, [contenteditable=\"true\"]",
+    "file_input": "input[type=\"file\"]",
+    "upload_trigger_btn": "[data-testid=\"upload-button\"], button:has-text(\"Upload\"), button:has-text(\"Escolher arquivo\")",
+    "submit_btn": "[data-testid=\"generate-button\"], button[aria-label*=\"Generate\"], button:has-text(\"Generate\"), button:has-text(\"Gerar\"), button[type=\"submit\"]",
+    "processing_indicator": "[data-testid=\"processing-spinner\"], [role=\"progressbar\"], .loading-spinner",
+    "download_btn": "[data-testid=\"download-button\"], button[aria-label*=\"Download\"], button:has-text(\"Download\"), button:has-text(\"Baixar\"), a[download]",
+    "result_media_element": "audio[src], video[src], img.generated-result[src]",
+    "quota_badge": "[data-testid=\"credits-badge\"], [data-testid=\"quota-remaining\"], .credits-counter, [aria-label*=\"credits\"], [aria-label*=\"créditos\"]",
+    "modal_close_btn": "[data-testid=\"modal-close\"], button[aria-label=\"Close\"], button[aria-label=\"Fechar\"], sp-close-button"
+  },
+  "quota_rules": {
+    "unit": "credits",
+    "default_free_limit": 100.0,
+    "default_pro_limit": 1000.0,
+    "cost_per_execution": 1.0,
+    "exhausted_http_codes": [402, 422, 429],
+    "exhausted_text_keywords": [
+      "quota exceeded",
+      "out of credits",
+      "insufficient credits",
+      "daily limit reached",
+      "limite diário atingido",
+      "sem créditos"
+    ]
+  }
+}

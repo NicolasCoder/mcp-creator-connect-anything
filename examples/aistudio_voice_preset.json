@@ -1,0 +1,24 @@
+{
+  "service_info": {
+    "name": "Google AI Studio Speech (Gemini 3.8 Flash TTS)",
+    "prefix": "aistudio",
+    "target_url": "https://aistudio.google.com/generate-speech",
+    "chrome_port": 9353,
+    "daemon_port": 9354,
+    "repo_url": "https://github.com/NicolasCoder/aistudio-voice-mcp"
+  },
+  "selectors": {
+    "generate_speech_url": "https://aistudio.google.com/generate-speech",
+    "speech_block": "ms-speech-block",
+    "voice_chip": "ms-speech-block button.voice-chip",
+    "style_chip": "ms-speech-block button[aria-label=\"Style\"], ms-speech-block button.attribute-chip",
+    "text_input": "ms-speech-block textarea[aria-label=\"Speech block text\"]",
+    "run_btn": "button.ctrl-enter-submits, ms-run-button button",
+    "download_btn": "button.download-button[aria-label=\"Download\"]"
+  },
+  "audio_silence_shield": {
+    "os_mute_flag": "--mute-audio",
+    "cdp_page_mute": true,
+    "webaudio_zero_gain_node": true
+  }
+}

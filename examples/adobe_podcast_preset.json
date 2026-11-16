@@ -1,0 +1,30 @@
+{
+  "service_info": {
+    "name": "Adobe Podcast Enhance Speech V2 (SoundLift)",
+    "prefix": "podcast",
+    "target_url": "https://podcast.adobe.com/enhance",
+    "chrome_port": 9343,
+    "daemon_port": 9344,
+    "repo_url": "https://github.com/NicolasCoder/audio-enhance-mcp"
+  },
+  "api_endpoints": {
+    "gateway_base": "https://phonos-server-flex.adobe.io",
+    "api_key": "phonos-server-prod",
+    "tracks_path": "/api/v1/enhance_speech_tracks",
+    "user_path": "/api/v1/user",
+    "user_metrics_path": "/api/v1/user_metrics"
+  },
+  "selectors": {
+    "enhance_url": "https://podcast.adobe.com/enhance",
+    "file_input": "#enhance-file-upload, input[type=\"file\"][id*=\"enhance\"], input[type=\"file\"]",
+    "choose_files_btn": "[data-testid=\"choose-files-button\"], sp-button:has-text(\"Choose files\"), sp-button:has-text(\"Escolher arquivos\")",
+    "download_btn": "[data-testid=\"download-button\"], sp-button:has-text(\"Download\"), sp-button:has-text(\"Baixar\")",
+    "strength_slider": "[data-testid=\"speech-strength-container\"], sp-slider, input[type=\"range\"]"
+  },
+  "quota_rules": {
+    "unit": "seconds",
+    "free_daily_limit_sec": 3600,
+    "pro_daily_limit_sec": 14400,
+    "multi_account_auto_rotate": true
+  }
+}

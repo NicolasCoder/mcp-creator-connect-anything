@@ -1,0 +1,27 @@
+{
+  "service_info": {
+    "name": "Google Flow Studio (Veo 3.1 & Nano Banana 2.1)",
+    "prefix": "flow",
+    "target_url": "https://flow.google.com/",
+    "chrome_port": 9333,
+    "daemon_port": 9334,
+    "repo_url": "https://github.com/NicolasCoder/flow-studio-mcp"
+  },
+  "rpc_ids": {
+    "video_generate": ["YhhmEf", "eb1hJf"],
+    "image_generate": ["ogiZ0b"],
+    "status_poll": "jwpduf"
+  },
+  "selectors": {
+    "target_url": "https://flow.google.com/",
+    "new_project_btn": "button:has-text(\"New project\"), button:has-text(\"Novo projeto\"), a:has-text(\"New project\"), a:has-text(\"Novo projeto\")",
+    "prompt_editor": ".ProseMirror",
+    "settings_trigger": "[aria-label=\"Settings trigger\"], [aria-label*=\"Configura\"], button:has-text(\"crop_\")",
+    "slot_start_frame": "button:text-is(\"Start\"), button:has-text(\"Start\")",
+    "slot_end_frame": "button:text-is(\"End\"), button:has-text(\"End\")",
+    "slot_ingredients": "[aria-label=\"Add ingredients to the prompt box\"]",
+    "start_generation_btn": "[aria-label=\"Start generation\"], [aria-label=\"Iniciar geração\"], button:has(mat-icon:text(\"arrow_forward\"))",
+    "image_tile_img": "flow-image-tile img",
+    "video_tile": "flow-video-tile"
+  }
+}
