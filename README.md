@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="assets/cover_conecte_qualquer_site.png" alt="MCP Creator — Connect Anything Banner" width="100%" />
+
+<br />
+
 # ⚡ MCP Creator — Connect Anything
 
 ### **Transforme QUALQUER Site, SaaS ou Plataforma Web em um Servidor MCP Inquebrável, Multi-Conta, Invisível e Auto-Curável (Self-Healing)**
